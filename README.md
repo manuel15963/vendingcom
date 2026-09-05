@@ -48,44 +48,9 @@ misma instalación, con sus datos completamente aislados unos de otros.
 
 ## Arquitectura
 
-```mermaid
-flowchart TB
-    subgraph clientes["Clientes"]
-        WEB["Aplicación de gestión<br/>Angular"]
-        APP["App de campo<br/>Ionic · sin conexión"]
-    end
-
-    AUTH["Autenticación<br/>JWT · roles · multiempresa"]
-
-    subgraph operacion["Operación"]
-        CUS["Clientes"]
-        LOC["Ubicaciones"]
-        MAC["Máquinas"]
-        INV["Inventario"]
-        ROU["Rutas y Visitas"]
-        COL["Recaudación"]
-    end
-
-    subgraph cadena["Cadena de suministro"]
-        SUP["Abastecimiento"]
-        PUR["Compras"]
-        EXP["Gastos"]
-        TIC["Tickets"]
-    end
-
-    REP["Reportes<br/>36 informes"]
-    DB[("PostgreSQL<br/>81 tablas")]
-
-    WEB --> AUTH
-    APP --> AUTH
-    AUTH --> operacion
-    AUTH --> cadena
-    operacion --> REP
-    cadena --> REP
-    operacion --> DB
-    cadena --> DB
-    REP --> DB
-```
+<p align="center">
+<img width="100%" alt="Arquitectura de VENDINGCOM" src="./assets/arquitectura.svg"/>
+</p>
 
 Cada servicio es una aplicación **Spring Boot** independiente, con su propio ciclo de vida, sus
 pruebas y su despliegue en **Google Cloud Run**. Escalan a cero cuando no reciben tráfico, lo que
@@ -107,6 +72,44 @@ mantiene el costo de operación cercano a cero en periodos de baja actividad.
 | **Abastecimiento** | Proveedores, almacenes y vehículos |
 | **Compras** | Órdenes de compra y recepción de mercadería, que alimenta el stock automáticamente |
 | **Gastos** | Costos operativos, base del cálculo de rentabilidad |
+
+---
+
+## De extremo a extremo: la aplicación web
+
+El recorrido completo de un clic en el navegador hasta la fila en la base de datos, y lo que ese
+clic desencadena en el resto del sistema.
+
+<p align="center">
+<img width="100%" alt="Flujo de extremo a extremo de la aplicación web" src="./assets/flujo-web.svg"/>
+</p>
+
+El detalle que sostiene todo lo demás está en el paso dos: **auth-service emite un solo token** que
+lleva dentro el rol del usuario y su empresa, y ese mismo token vale para los doce servicios. Ninguno
+guarda sesión. Cada uno valida la firma y filtra por empresa antes de tocar la base de datos, así que
+el aislamiento entre empresas no depende de que el frontend se porte bien.
+
+---
+
+## De extremo a extremo: la app de campo
+
+El operador recorre ubicaciones que muchas veces están en sótanos, almacenes o zonas industriales.
+**La app no asume que hay red en ningún momento.**
+
+<p align="center">
+<img width="100%" alt="Flujo de extremo a extremo de la app de campo sin conexión" src="./assets/flujo-app.svg"/>
+</p>
+
+Antes de salir, el operador descarga su viaje: paradas, inventario de cada máquina, última lectura de
+contador y los catálogos que va a necesitar. Todo eso queda guardado en el móvil.
+
+Durante la ruta cada gesto se convierte en una **acción tipada** que entra en una cola durable en vez
+de salir a la red: iniciar y cerrar visita, servicio de la máquina, conteo de efectivo, lectura de
+contador, foto y comentario. La cola sobrevive a que se cierre la aplicación.
+
+Cuando vuelve la señal, la app lo detecta sola y **reenvía la cola en el mismo orden en que ocurrió**,
+porque cerrar una visita antes de haberla iniciado no tendría sentido. Al terminar informa cuántas
+acciones se enviaron y cuántas fallaron, sin perder nada por el camino.
 
 ---
 
