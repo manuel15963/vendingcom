@@ -1,76 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="100%" role="img" aria-label="Flujo de extremo a extremo de la app de campo sin conexión">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1180" width="100%" role="img" aria-label="Flujo de la app de campo con decisiones">
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8B5CF6"/></marker>
 <linearGradient id="gc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1D4ED8"/><stop offset="100%" stop-color="#6D28D9"/></linearGradient>
 </defs>
-<rect width="1200" height="780" fill="#0D1117"/>
-<text x="600" y="40" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">El operador trabaja en sótanos y zonas sin señal. La app no depende de la red.</text>
-<rect x="36" y="70" width="364" height="470" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
-<text x="54" y="94" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#93C5FD" text-anchor="start" opacity="1">1 · ANTES DE SALIR  ·  con señal</text>
-<rect x="60" y="110" width="316" height="62" rx="9" fill="url(#gc)" stroke="#3B82F6" stroke-width="1.5"/>
-<text x="218.0" y="138.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1">Descargar viaje</text>
-<text x="218.0" y="156.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">un toque antes de arrancar</text>
-<path d="M 218 172 L 218 196" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
-<rect x="60" y="196" width="316" height="236" rx="9" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5"/>
-<text x="218.0" y="319.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1"></text>
-<text x="218" y="224" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Se guarda en el móvil</text>
-<text x="80" y="252" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Viajes y paradas de la ruta</text>
-<text x="80" y="279" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Inventario de cada máquina</text>
-<text x="80" y="306" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Última lectura de contador</text>
-<text x="80" y="333" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Métodos de recaudación</text>
-<text x="80" y="360" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Catálogos de movimientos</text>
-<text x="80" y="387" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#A5B4FC" text-anchor="start" opacity="1">·  Tipo de foto permitido</text>
-<rect x="88" y="456" width="260" height="36" rx="18.0" fill="#111827" stroke="#334155" stroke-width="1.2"/>
-<text x="218.0" y="478.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#CBD5E1" text-anchor="middle" opacity="1">IndexedDB del navegador</text>
-<rect x="418" y="70" width="364" height="470" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
-<text x="436" y="94" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#93C5FD" text-anchor="start" opacity="1">2 · EN RUTA  ·  sin señal</text>
-<rect x="442" y="110" width="316" height="62" rx="9" fill="#4C1D95" stroke="#8B5CF6" stroke-width="1.5"/>
-<text x="600.0" y="138.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1">El operador trabaja igual</text>
-<text x="600.0" y="156.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">nada se bloquea por falta de red</text>
-<path d="M 600 172 L 600 196" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
-<rect x="442" y="196" width="316" height="236" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
-<text x="600.0" y="319.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1"></text>
-<text x="600" y="224" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Cada gesto entra en la cola</text>
-<rect x="470" y="244" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="540.0" y="264.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">START_VISIT</text>
-<rect x="626" y="244" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="696.0" y="264.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">FINISH_VISIT</text>
-<rect x="470" y="288" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="540.0" y="308.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">SERVICE</text>
-<rect x="626" y="288" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="696.0" y="308.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">CASH</text>
-<rect x="470" y="332" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="540.0" y="352.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">METER</text>
-<rect x="626" y="332" width="140" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="696.0" y="352.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">PHOTO</text>
-<rect x="470" y="376" width="296" height="32" rx="16.0" fill="#1E1B4B" stroke="#6D28D9" stroke-width="1.2"/>
-<text x="618.0" y="396.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#DDD6FE" text-anchor="middle" opacity="1">COMMENT</text>
-<rect x="476" y="456" width="248" height="36" rx="18.0" fill="#111827" stroke="#334155" stroke-width="1.2"/>
-<text x="600.0" y="478.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#CBD5E1" text-anchor="middle" opacity="1">Cola durable, en orden</text>
-<rect x="800" y="70" width="364" height="470" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
-<text x="818" y="94" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#93C5FD" text-anchor="start" opacity="1">3 · AL RECONECTAR</text>
-<rect x="824" y="110" width="316" height="62" rx="9" fill="#7C3AED" stroke="#C084FC" stroke-width="1.5"/>
-<text x="982.0" y="138.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1">Se detecta la red</text>
-<text x="982.0" y="156.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">el sistema reacciona solo</text>
-<path d="M 982 172 L 982 196" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
-<rect x="824" y="196" width="316" height="236" rx="9" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
-<text x="982.0" y="319.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1"></text>
-<text x="982" y="224" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Se reenvía todo en orden</text>
-<rect x="852" y="246" width="260" height="34" rx="17.0" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2"/>
-<text x="982.0" y="267.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#DBEAFE" text-anchor="middle" opacity="1">Rutas y Visitas</text>
-<rect x="852" y="290" width="260" height="34" rx="17.0" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2"/>
-<text x="982.0" y="311.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#DBEAFE" text-anchor="middle" opacity="1">Recaudación</text>
-<rect x="852" y="334" width="260" height="34" rx="17.0" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2"/>
-<text x="982.0" y="355.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#DBEAFE" text-anchor="middle" opacity="1">Inventario</text>
-<rect x="852" y="378" width="260" height="34" rx="17.0" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2"/>
-<text x="982.0" y="399.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#DBEAFE" text-anchor="middle" opacity="1">Máquinas</text>
-<rect x="848" y="456" width="268" height="36" rx="18.0" fill="#111827" stroke="#334155" stroke-width="1.2"/>
-<text x="982.0" y="478.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#CBD5E1" text-anchor="middle" opacity="1">Resultado: enviadas y fallidas</text>
-<path d="M 400 300 L 414 300" stroke="#8B5CF6" stroke-width="2" marker-end="url(#a)"/>
-<path d="M 782 300 L 796 300" stroke="#8B5CF6" stroke-width="2" marker-end="url(#a)"/>
-<path d="M 600 540 L 600 576" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
-<rect x="300" y="576" width="600" height="72" rx="9" fill="#0F172A" stroke="#A855F7" stroke-width="1.5"/>
-<text x="600.0" y="609.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1">PostgreSQL</text>
-<text x="600.0" y="627.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">La visita, el efectivo y las lecturas quedan registrados como si hubiera habido señal</text>
-<text x="600" y="700" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Sin esto el sistema sería inútil en la mitad de las ubicaciones reales.</text>
+<rect width="1200" height="1180" fill="#0D1117"/>
+<text x="600" y="34" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">El operador nunca espera a que haya señal. El sistema decide por él.</text>
+<rect x="360" y="52" width="480" height="58" rx="9" fill="url(#gc)" stroke="#3B82F6" stroke-width="1.5"/>
+<text x="600.0" y="78.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" opacity="1">El operador registra algo</text>
+<text x="600.0" y="96.0" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">visita, servicio, efectivo, lectura, foto o comentario</text>
+<path d="M 600 110 L 600 140" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<path d="M 600 140.0 L 750.0 188 L 600 236.0 L 450.0 188 Z" fill="#1E1B4B" stroke="#A855F7" stroke-width="1.8"/>
+<text x="600" y="193" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">¿Hay señal ahora?</text>
+<path d="M 750 188 L 874 188" stroke="#8B5CF6" stroke-width="1.8" marker-end="url(#a)" opacity="0.9"/>
+<rect x="746" y="163" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="762" y="178" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">sí</text>
+<rect x="880" y="159" width="280" height="58" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="1020.0" y="183" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Sale directo al servicio</text>
+<rect x="602" y="231" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="618" y="246" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">no</text>
+<path d="M 600 236 L 600 266" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<rect x="390" y="266" width="420" height="86" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="600.0" y="290" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Entra en la cola del móvil</text>
+<text x="600.0" y="311" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Se guarda la acción con su tipo y su orden.</text>
+<text x="600.0" y="327" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Si es una foto, se guarda también el archivo.</text>
+<path d="M 600 352 L 600 382" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<rect x="390" y="382" width="420" height="66" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="600.0" y="406" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">El operador sigue trabajando</text>
+<text x="600.0" y="427" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Nada se bloquea por falta de red.</text>
+<path d="M 600 448 L 600 478" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<path d="M 600 478.0 L 750.0 526 L 600 574.0 L 450.0 526 Z" fill="#1E1B4B" stroke="#A855F7" stroke-width="1.8"/>
+<text x="600" y="531" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">¿Volvió la señal?</text>
+<path d="M 750 526 L 874 526" stroke="#8B5CF6" stroke-width="1.8" marker-end="url(#a)" opacity="0.9"/>
+<rect x="746" y="501" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="762" y="516" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">no</text>
+<rect x="880" y="497" width="280" height="58" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="1020.0" y="521" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Sigue guardando en la cola</text>
+<path d="M 1020 497 V 320 H 816" stroke="#8B5CF6" stroke-width="1.6" fill="none" marker-end="url(#a)" opacity="0.7" stroke-dasharray="5 5"/>
+<rect x="602" y="569" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="618" y="584" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">sí</text>
+<path d="M 600 574 L 600 604" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<path d="M 600 604.0 L 760.0 652 L 600 700.0 L 440.0 652 Z" fill="#1E1B4B" stroke="#A855F7" stroke-width="1.8"/>
+<text x="600" y="650" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">¿Ya hay una sincronización</text>
+<text x="600" y="668" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">en curso?</text>
+<path d="M 760 652 L 874 652" stroke="#8B5CF6" stroke-width="1.8" marker-end="url(#a)" opacity="0.9"/>
+<rect x="751" y="627" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="767" y="642" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">sí</text>
+<rect x="880" y="623" width="280" height="58" rx="9" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.5"/>
+<text x="1020.0" y="647" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">No hace nada y espera</text>
+<rect x="602" y="695" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="618" y="710" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">no</text>
+<path d="M 600 700 L 600 730" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<rect x="340" y="730" width="520" height="72" rx="9" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+<text x="600.0" y="754" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Recorre la cola en orden, una por una</text>
+<text x="600.0" y="775" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Cerrar una visita antes de abrirla no tendría sentido.</text>
+<path d="M 600 802 L 600 832" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<path d="M 600 832.0 L 750.0 880 L 600 928.0 L 450.0 880 Z" fill="#1E1B4B" stroke="#A855F7" stroke-width="1.8"/>
+<text x="600" y="885" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">¿Entró la acción?</text>
+<path d="M 450 880 L 346 880" stroke="#8B5CF6" stroke-width="1.8" marker-end="url(#a)" opacity="0.9"/>
+<rect x="457" y="855" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="473" y="870" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">sí</text>
+<rect x="60" y="838" width="280" height="86" rx="9" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+<text x="200.0" y="862" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Se quita de la cola</text>
+<text x="200.0" y="883" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Y se borra la foto guardada</text>
+<text x="200.0" y="899" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">que ya viajó al servidor.</text>
+<path d="M 750 880 L 874 880" stroke="#8B5CF6" stroke-width="1.8" marker-end="url(#a)" opacity="0.9"/>
+<rect x="711" y="855" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="727" y="870" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1">no</text>
+<rect x="880" y="838" width="280" height="86" rx="9" fill="#0F172A" stroke="#FBBF24" stroke-width="1.5"/>
+<text x="1020.0" y="862" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Se queda para el próximo</text>
+<text x="1020.0" y="883" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">intento. No corta las demás</text>
+<text x="1020.0" y="899" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">acciones de la cola.</text>
+<rect x="602" y="927" width="32" height="20" rx="10" fill="#0D1117" stroke="#C4B5FD" stroke-width="1"/>
+<text x="618" y="942" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#C4B5FD" text-anchor="middle" opacity="1"></text>
+<path d="M 600 928 L 600 978" stroke="#8B5CF6" stroke-width="1.8" fill="none" marker-end="url(#a)" opacity="0.9"/>
+<rect x="340" y="978" width="520" height="72" rx="9" fill="#0F172A" stroke="#A855F7" stroke-width="1.5"/>
+<text x="600.0" y="1002" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" opacity="1">Informa cuántas entraron y cuántas fallaron</text>
+<text x="600.0" y="1023" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Nada se pierde por el camino.</text>
+<text x="600" y="1105" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#A5B4FC" text-anchor="middle" opacity="1">Sin esto el sistema sería inútil en la mitad de las ubicaciones reales.</text>
 </svg>

@@ -75,41 +75,54 @@ mantiene el costo de operación cercano a cero en periodos de baja actividad.
 
 ---
 
-## De extremo a extremo: la aplicación web
+## El camino de una petición
 
-El recorrido completo de un clic en el navegador hasta la fila en la base de datos, y lo que ese
-clic desencadena en el resto del sistema.
+Cada vez que alguien toca un botón, la petición atraviesa una serie de puntos donde el sistema
+**decide**. Este es el recorrido real, con lo que pasa si la respuesta es sí y lo que pasa si es no.
 
 <p align="center">
-<img width="100%" alt="Flujo de extremo a extremo de la aplicación web" src="./assets/flujo-web.svg"/>
+<img width="100%" alt="Camino de una petición con sus decisiones" src="./assets/flujo-peticion.svg"/>
 </p>
 
-El detalle que sostiene todo lo demás está en el paso dos: **auth-service emite un solo token** que
-lleva dentro el rol del usuario y su empresa, y ese mismo token vale para los doce servicios. Ninguno
-guarda sesión. Cada uno valida la firma y filtra por empresa antes de tocar la base de datos, así que
-el aislamiento entre empresas no depende de que el frontend se porte bien.
+Tres de esas decisiones merecen explicación, porque son las que sostienen el resto del sistema.
+
+**El modo demostración corta antes que nadie.** Va primero en la cadena a propósito. Mientras está
+encendido, ninguna petición llega a salir del equipo: se responde ahí mismo con datos de ejemplo. Lo
+que hace segura la demostración no es tener cuidado de no escribir en la base de datos, es que la
+llamada nunca viaja. Tampoco se dispara un correo, ni una subida de imagen, ni consumo del asistente.
+
+**La caché existe para tapar el arranque en frío.** Los servicios se apagan cuando nadie los usa, así
+que la primera llamada del día tarda. Una lectura repetida dentro de los treinta segundos siguientes
+se responde al instante sin tocar la red. Y cualquier escritura vacía la caché entera, de modo que
+después de guardar algo nunca se ve el dato viejo.
+
+**El token lleva dentro la empresa.** auth-service emite uno solo que vale para los doce servicios;
+ninguno guarda sesión. Cada servicio valida la firma y filtra por esa empresa antes de tocar la base
+de datos, así que el aislamiento entre empresas no depende de que el frontend se porte bien. Si el
+token vence, la respuesta con código 401 borra la sesión y devuelve al login sin que nadie lo pida.
 
 ---
 
-## De extremo a extremo: la app de campo
+## El operador en campo, sin señal
 
-El operador recorre ubicaciones que muchas veces están en sótanos, almacenes o zonas industriales.
-**La app no asume que hay red en ningún momento.**
+El operador recorre ubicaciones que a menudo están en sótanos, almacenes o zonas industriales. **La
+app no espera a que haya red en ningún momento**: decide sola qué hacer con cada gesto.
 
 <p align="center">
-<img width="100%" alt="Flujo de extremo a extremo de la app de campo sin conexión" src="./assets/flujo-app.svg"/>
+<img width="100%" alt="Flujo de la app de campo con sus decisiones" src="./assets/flujo-app.svg"/>
 </p>
 
 Antes de salir, el operador descarga su viaje: paradas, inventario de cada máquina, última lectura de
-contador y los catálogos que va a necesitar. Todo eso queda guardado en el móvil.
+contador y los catálogos que va a necesitar. Todo queda guardado en el móvil.
 
-Durante la ruta cada gesto se convierte en una **acción tipada** que entra en una cola durable en vez
-de salir a la red: iniciar y cerrar visita, servicio de la máquina, conteo de efectivo, lectura de
-contador, foto y comentario. La cola sobrevive a que se cierre la aplicación.
+Durante la ruta, si hay señal la acción sale directa; si no la hay, entra en una cola guardada en el
+propio teléfono que sobrevive a que se cierre la aplicación. Cuando la señal vuelve, la app reenvía la
+cola **en el mismo orden en que ocurrió**, porque cerrar una visita antes de haberla abierto no
+tendría sentido.
 
-Cuando vuelve la señal, la app lo detecta sola y **reenvía la cola en el mismo orden en que ocurrió**,
-porque cerrar una visita antes de haberla iniciado no tendría sentido. Al terminar informa cuántas
-acciones se enviaron y cuántas fallaron, sin perder nada por el camino.
+El detalle que evita perder trabajo está en el último rombo: **una acción que falla no corta las
+demás**. Se queda en la cola esperando el siguiente intento mientras el resto sigue subiendo, y al
+final la app informa cuántas entraron y cuántas quedaron pendientes.
 
 ---
 
