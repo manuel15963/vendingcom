@@ -75,6 +75,37 @@ mantiene el costo de operación cercano a cero en periodos de baja actividad.
 
 ---
 
+## El sistema completo, decisión por decisión
+
+Desde que alguien llega a la plataforma hasta que se sabe si una ubicación deja dinero. Cada rombo
+es un punto donde el sistema decide, con lo que ocurre si la respuesta es sí y lo que ocurre si es no.
+
+<p align="center">
+<img width="100%" alt="Flujo completo del sistema, decisión por decisión" src="./assets/flujo-sistema.svg"/>
+</p>
+
+<div align="center"><sub>Pulsa la imagen para verla a tamaño completo.</sub></div>
+
+El ciclo se cierra sobre sí mismo: lo que se aprende al medir la rentabilidad vuelve a la oficina y
+cambia lo que se compra, a qué máquinas se va y qué producto se pone en cada una.
+
+Vale la pena mirar tres bifurcaciones, porque son las que separan un sistema de gestión de una hoja
+de cálculo:
+
+**No se sale a la calle porque toque, se sale porque hace falta.** El viaje solo se arma con las
+máquinas que están bajo mínimo o a punto de agotarse, y el pronóstico dice cuántos días faltan para
+que cada una lo esté. Un recorrido menos es combustible, horas y desgaste que no se gastan.
+
+**Si el efectivo no cuadra, se registra la diferencia.** No se ajusta el número para que encaje. El
+conteo se compara contra lo que marca el contador de la máquina y el descuadre queda anotado para
+investigarlo, que es justo el dato que un cuaderno nunca deja ver.
+
+**Cerrar un viaje y contabilizarlo son dos cosas distintas.** Una visita puede estar terminada sin
+haber impactado el periodo contable todavía, y si algo salió mal se puede despostear y rehacer sin
+tocar el historial operativo.
+
+---
+
 ## El camino de una petición
 
 Cada vez que alguien toca un botón, la petición atraviesa una serie de puntos donde el sistema
